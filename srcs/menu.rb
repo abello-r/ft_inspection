@@ -17,7 +17,7 @@ def ft_menu
 	print "{99}-| ".blue; print "Exit\n\n"
 	
 	# Command Line
-	print "ft_inception~# ".blue
+	print "ft_inspection~# ".blue
 	opt_usr = STDIN.gets.chomp
 
 	if opt_usr == ""
