@@ -28,6 +28,7 @@ def ft_menu
 	elsif opt_usr == "0"
 		print "\n"
 		system("git pull")
+		print "\n"
 		sleep 2
 		system("sh srcs/.prompt.sh")
 		ft_menu()

@@ -8,21 +8,18 @@ RESET=`tput sgr0`
 # Init
 sh srcs/.prompt.sh
 
-if [ -f /Users/*/.brew ]
+if [ -f /Users/*/.brew/bin/brew ]
 	then
-		sleep 0.1
+		:
 	else
-		git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew && echo 'export PATH=$HOME/.brew/bin:$PATH' >> $HOME/.zshrc && source $HOME/.zshrc && brew update
+		git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew && export PATH=$HOME/.brew/bin:$PATH && brew update && echo "export PATH=$HOME/.brew/bin:$PATH" >> ~/.zshrc
 fi
 
 if [ -f /usr/bin/ruby ]
 	then
-		sleep 0.1
+		:
 	else
 		brew install ruby
-		gem install oauth2
-		gem install colorize
-		gem install dotenv
 fi
 
 if [ -f .env ]
