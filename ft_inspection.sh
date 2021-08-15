@@ -30,8 +30,6 @@ if [ -f .env ]
 		sh srcs/.prompt.sh
 		ruby srcs/menu.rb
 	else
-		alias pect="sh /Users/abello-r/Desktop/ft_inspect/ft_inspection.sh"
-		source ~/.zshrc
 		# Ad
 		echo "\nIf you don't have your keys yet, you can get them at https://profile.intra.42.fr/oauth/applications\n"
 		
