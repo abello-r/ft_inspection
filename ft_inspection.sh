@@ -12,7 +12,8 @@ if [ -f /Users/*/.brew ]
 	then
 		sleep 0
 	else
-		brew install --HEAD https://raw.githubusercontent.com/sowson/valgrind/master/valgrind.rb
+		rm -rf $HOME/.brew && git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew && echo 'export PATH=$HOME/.brew/bin:$PATH' >> $HOME/.zshrc && source $HOME/.zshrc && brew update
+		rm -rf $HOME/.brew && git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew && export PATH=$HOME/.brew/bin:$PATH && brew update && echo "export PATH=$HOME/.brew/bin:$PATH" >> ~/.zshrc
 fi
 
 if [ -f /usr/bin/ruby ]
