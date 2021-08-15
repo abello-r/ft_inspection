@@ -5,24 +5,20 @@ GREEN=`tput setaf 2`
 BLUE=`tput setaf 4`
 RESET=`tput sgr0`
 
-function	ft_prompt
-{
-	clear
-	printf "███████╗████████╗     ██╗███╗   ██╗███████╗██████╗ ███████╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗\n"
-	printf "${BLUE}██╔════╝╚══██╔══╝     ██║████╗  ██║██╔════╝██╔══██╗██╔════╝██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║\n"
-	printf "${BLUE}█████╗     ██║        ██║██╔██╗ ██║███████╗██████╔╝█████╗  ██║        ██║   ██║██║   ██║██╔██╗ ██║\n"
-	printf "${BLUE}██╔══╝     ██║        ██║██║╚██╗██║╚════██║██╔═══╝ ██╔══╝  ██║        ██║   ██║██║   ██║██║╚██╗██║\n"
-	printf "${RESET}██║        ██║███████╗██║██║ ╚████║███████║██║     ███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║\n"
-	printf "${RESET}╚═╝        ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝╚═╝     ╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n"
-	printf "                                                                                                  \n"
-	printf "										{ ${BLUE}Coded ${RESET}By${BLUE} Legion${RESET} }										  \n"
-}
-
 # Init
-ft_prompt
+sh srcs/.prompt.sh
+
+if [ -d /usr/bin/ruby ]
+	then
+		brew install ruby
+		gem install oauth2
+		gem install colorize
+		gem install dotenv
+fi
+
 if [ -f .env ]
 	then
-		ft_prompt
+		sh srcs/.prompt.sh
 		ruby srcs/menu.rb
 	else
 		alias pect="sh /Users/abello-r/Desktop/ft_inspect/ft_inspection.sh"
@@ -48,6 +44,6 @@ if [ -f .env ]
 		echo 'SECRET='$FILL_SECRET >> .env
 		echo 'URL=https://api.intra.42.fr/oauth/token' >> .env
 		sleep 3
-		ft_prompt
+		sh srcs/.prompt.sh
 		ruby srcs/menu.rb
 fi

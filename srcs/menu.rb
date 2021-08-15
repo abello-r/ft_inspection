@@ -20,9 +20,17 @@ def ft_menu
 	print "ft_inception~# ".blue
 	opt_usr = STDIN.gets.chomp
 
-	if opt_usr == "99"
-		print "\nBye √\n\n".red
-		exit
+	if opt_usr == ""
+		system("sh srcs/.prompt.sh")
+		ft_menu()
+	elsif opt_usr == "99"
+		print "\nGoodBye √\n\n".red
+	elsif opt_usr == "0"
+		print "\n"
+		system("git pull")
+		sleep 2
+		system("sh srcs/.prompt.sh")
+		ft_menu()
 	end
 
 
