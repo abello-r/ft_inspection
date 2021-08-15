@@ -20,6 +20,11 @@ if [ -f /usr/bin/ruby ]
 		:
 	else
 		brew install ruby
+		echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"' >> ~/.zshrc
+		source ~/.zshrc
+		gem install dotenv
+		gem install colorize
+		gem install oauth2
 fi
 
 if [ -f .env ]
