@@ -8,8 +8,17 @@ RESET=`tput sgr0`
 # Init
 sh srcs/.prompt.sh
 
-if [ -d /usr/bin/ruby ]
+if [ -f /Users/*/.brew ]
 	then
+		sleep 0
+	else
+		brew install --HEAD https://raw.githubusercontent.com/sowson/valgrind/master/valgrind.rb
+fi
+
+if [ -f /usr/bin/ruby ]
+	then
+		sleep 0
+	else
 		brew install ruby
 		gem install oauth2
 		gem install colorize
