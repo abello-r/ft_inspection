@@ -1,4 +1,4 @@
-require 'colorize'
+require "colorize"
 
 def ft_menu
 
@@ -11,7 +11,7 @@ def ft_menu
 	print "{4}--| ".blue; puts ""
 	print "{5}--| ".blue; puts ""
 	print "{6}--| ".blue; puts ""
-	print "{7}--| ".blue; puts ""
+	print "{7}--| ".blue; puts "See status token"
 	print "{8}--| ".blue; puts "Edit API token"
 	print "{0}--| ".blue; puts "Install & Update"
 	print "{99}-| ".blue; print "Exit\n\n"
@@ -23,8 +23,9 @@ def ft_menu
 	if opt_usr == ""
 		system("sh srcs/.prompt.sh")
 		ft_menu()
-	elsif opt_usr == "99"
+	elsif opt_usr == "99" || opt_usr == "Exit" || opt_usr == "exit"
 		print "\nGoodBye √\n\n".red
+		exit
 	elsif opt_usr == "0"
 		print "\n"
 		system("git pull")
@@ -32,8 +33,16 @@ def ft_menu
 		sleep 2
 		system("sh srcs/.prompt.sh")
 		ft_menu()
+	elsif opt_usr == "8"
+		system("rm -rf .env")
+		system("sh ft_inspection.sh")
+	else
+		print "\nCommand not found\n\n"
+		sleep 0.5
+		system("sh ft_inspection.sh")
+		system("clear")
+		ft_menu()
 	end
-
 
 end
 
