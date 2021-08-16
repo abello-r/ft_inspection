@@ -28,7 +28,7 @@ def ft_menu
 		exit
 	elsif opt_usr == "0"
 		print "\n"
-		system("git pull")
+		system("cd ~/.ft_inspection ; git pull")
 		print "\n"
 		sleep 2
 		system("sh $HOME/.ft_inspection/srcs/.prompt.sh")
