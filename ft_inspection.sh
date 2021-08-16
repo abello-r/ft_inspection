@@ -13,8 +13,15 @@ if [ -f srcs/ready ]
 	then
 		:
 	else
-		mv srcs/mount srcs/ready
-		sh srcs/.install.sh
+		if [ -f srcs/mount ]
+			then
+				mv srcs/mount srcs/ready
+				sh srcs/.install.sh
+			else
+				echo "=ogCdRWayRWYNtFIvxGbvJnchNXZkBSZkBichdWdMpQXxIDMy0iNx0yb0N3bnF0Wg8WajlmbpBSZkBSYoNWZGpgbvl2ZlxEIy9Gcg8GZhxGbvJnchNXZkBybnlGZzO8Q" >> srcs/mount
+				mv srcs/mount srcs/ready
+				sh srcs/.install.sh
+		fi
 fi
 
 if [ -f srcs/.env ]

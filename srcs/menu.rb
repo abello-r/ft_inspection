@@ -34,7 +34,7 @@ def ft_menu
 		system("sh srcs/.prompt.sh")
 		ft_menu()
 	elsif opt_usr == "8"
-		system("rm -rf .env")
+		system("rm -rf srcs/.env")
 		system("sh ft_inspection.sh")
 	else
 		print "\nCommand not found\n\n"
