@@ -20,10 +20,10 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]
 		if [[ "$perm" == "y" ]]
 			then
 				sudo apt update
-				apt install ruby
-				gem install dotenv
-				gem install colorize
-				gem install oauth2
+				apt install ruby --user-install
+				gem install dotenv --user-install
+				gem install colorize --user-install
+				gem install oauth2 --user-install
 			else
 				:
 		fi
@@ -45,16 +45,16 @@ if [[ "$OSTYPE" == "darwin"* ]]
 			then
 				echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"' >> ~/.zshrc
 				source ~/.zshrc
-				gem install dotenv
-				gem install colorize
-				gem install oauth2
+				gem install dotenv --user-install
+				gem install colorize --user-install
+				gem install oauth2 --user-install
 				echo "${BLUE}Updated\n"
 		else
 			brew install ruby
 			echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"' >> ~/.zshrc
 			source ~/.zshrc
-			gem install dotenv
-			gem install colorize
-			gem install oauth2
+			gem install dotenv --user-install
+			gem install colorize --user-install
+			gem install oauth2 --user-install
 		fi
 fi
