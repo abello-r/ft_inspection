@@ -2,6 +2,7 @@
 
 # Colors
 GREEN=`tput setaf 2`
+BOLD=`tput bold`
 BLUE=`tput setaf 4`
 CYAN=`tput setaf 6`
 RESET=`tput sgr0`
@@ -15,4 +16,4 @@ WHITE=`tput setaf 7`
 	printf "${WHITE}██║        ██║███████╗██║██║ ╚████║███████║██║     ███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║\n"
 	printf "${WHITE}╚═╝        ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝╚═╝     ╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n"
 	printf "                                                                                                  \n"
-	printf "										${WHITE}{ ${BLUE}Coded ${WHITE}By${BLUE} Legion${WHITE} }${RESET}										  \n"
+	printf "										${WHITE}${BOLD}{ ${BLUE}Coded ${WHITE}By${BLUE} Legion${WHITE} }${RESET}										  \n"
