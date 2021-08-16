@@ -6,8 +6,10 @@ WHITE=`tput setaf 7`
 BLUE=`tput setaf 4`
 RESET=`tput sgr0`
 
+abs="$HOME/.ft_inspection"
+
 clear
-sh srcs/.prompt.sh
+sh $abs/srcs/.prompt.sh
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]
 	then

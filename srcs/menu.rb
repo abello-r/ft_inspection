@@ -21,7 +21,7 @@ def ft_menu
 	opt_usr = STDIN.gets.chomp
 
 	if opt_usr == ""
-		system("sh srcs/.prompt.sh")
+		system("sh $HOME/.ft_inspection/srcs/.prompt.sh")
 		ft_menu()
 	elsif opt_usr == "99" || opt_usr == "Exit" || opt_usr == "exit"
 		print "\nGoodBye √\n\n".red.bold
@@ -31,16 +31,16 @@ def ft_menu
 		system("git pull")
 		print "\n"
 		sleep 2
-		system("sh srcs/.prompt.sh")
+		system("sh $HOME/.ft_inspection/srcs/.prompt.sh")
 		ft_menu()
 	elsif opt_usr == "8"
-		system("rm -rf srcs/.env")
-		system("sh ft_inspection.sh")
+		system("rm -rf $HOME/.ft_inspection/srcs/.env")
+		system("sh $HOME/.ft_inspection/ft_inspection.sh")
 	else
 		print "\nCommand not found\n\n"
 		sleep 0.5
 		system("clear")
-		system("sh srcs/.prompt.sh")
+		system("sh $HOME/.ft_inspection/srcs/.prompt.sh")
 		ft_menu()
 	end
 

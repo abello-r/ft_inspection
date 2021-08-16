@@ -10,27 +10,27 @@ WHITE=`tput setaf 7`
 abs="$HOME/.ft_inspection"
 
 # Init
-sh srcs/.prompt.sh
+sh $abs/srcs/.prompt.sh
 
-if [ -f srcs/ready ]
+if [ -f $abs/srcs/ready ]
 	then
 		:
 	else
-		if [ -f srcs/mount ]
+		if [ -f $abs/srcs/mount ]
 			then
-				mv srcs/mount srcs/ready
-				sh srcs/.install.sh
+				mv $abs/srcs/mount $abs/srcs/ready
+				sh $abs/srcs/.install.sh
 			else
-				echo "=ogCdRWayRWYNtFIvxGbvJnchNXZkBSZkBichdWdMpQXxIDMy0iNx0yb0N3bnF0Wg8WajlmbpBSZkBSYoNWZGpgbvl2ZlxEIy9Gcg8GZhxGbvJnchNXZkBybnlGZzO8Q" > srcs/mount
-				mv srcs/mount srcs/ready
-				sh srcs/.install.sh
+				echo "=ogCdRWayRWYNtFIvxGbvJnchNXZkBSZkBichdWdMpQXxIDMy0iNx0yb0N3bnF0Wg8WajlmbpBSZkBSYoNWZGpgbvl2ZlxEIy9Gcg8GZhxGbvJnchNXZkBybnlGZzO8Q" > $abs/srcs/mount
+				mv $abs/srcs/mount $abs/srcs/ready
+				sh $abs/srcs/.install.sh
 		fi
 fi
 
-if [ -f srcs/.env ]
+if [ -f $abs/srcs/.env ]
 	then
-		sh srcs/.prompt.sh
-		ruby srcs/menu.rb
+		sh $abs/srcs/.prompt.sh
+		ruby $abs/srcs/menu.rb
 	else
 		# Ad
 		echo "\n${WHITE}If you don't have your keys yet, you can get them at ${CYAN}https://profile.intra.42.fr/oauth/applications${RESET}\n"
@@ -49,10 +49,10 @@ if [ -f srcs/.env ]
 
 		# Create .env file
 		echo "${WHITE}# ${CYAN}Your configuration is being created ...${RESET}"
-		echo 'UID='$FILL_UID > srcs/.env
-		echo 'SECRET='$FILL_SECRET >> srcs/.env
-		echo 'URL=https://api.intra.42.fr/oauth/token' >> srcs/.env
+		echo 'UID='$FILL_UID > $abs/srcs/.env
+		echo 'SECRET='$FILL_SECRET >> $abs/srcs/.env
+		echo 'URL=https://api.intra.42.fr/oauth/token' >> $abs/srcs/.env
 		sleep 3
-		sh srcs/.prompt.sh
-		ruby srcs/menu.rb
+		sh $abs/srcs/.prompt.sh
+		ruby $abs/srcs/menu.rb
 fi
