@@ -45,16 +45,12 @@ if [[ "$OSTYPE" == "darwin"* ]]
 		#RUBY
 		if [ -f /usr/bin/ruby ]
 			then
-				echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"' >> ~/.zshrc
-				source ~/.zshrc
 				gem install dotenv --user-install
 				gem install colorize --user-install
 				gem install oauth2 --user-install
 				echo "${BLUE}Updated\n"
 		else
 			brew install ruby
-			echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"' >> ~/.zshrc
-			source ~/.zshrc
 			gem install dotenv --user-install
 			gem install colorize --user-install
 			gem install oauth2 --user-install

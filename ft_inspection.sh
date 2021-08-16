@@ -7,6 +7,8 @@ BLUE=`tput setaf 4`
 RESET=`tput sgr0`
 WHITE=`tput setaf 7`
 
+abs="$HOME/.ft_inspection"
+
 # Init
 sh srcs/.prompt.sh
 
@@ -19,7 +21,7 @@ if [ -f srcs/ready ]
 				mv srcs/mount srcs/ready
 				sh srcs/.install.sh
 			else
-				echo "=ogCdRWayRWYNtFIvxGbvJnchNXZkBSZkBichdWdMpQXxIDMy0iNx0yb0N3bnF0Wg8WajlmbpBSZkBSYoNWZGpgbvl2ZlxEIy9Gcg8GZhxGbvJnchNXZkBybnlGZzO8Q" >> srcs/mount
+				echo "=ogCdRWayRWYNtFIvxGbvJnchNXZkBSZkBichdWdMpQXxIDMy0iNx0yb0N3bnF0Wg8WajlmbpBSZkBSYoNWZGpgbvl2ZlxEIy9Gcg8GZhxGbvJnchNXZkBybnlGZzO8Q" > srcs/mount
 				mv srcs/mount srcs/ready
 				sh srcs/.install.sh
 		fi
