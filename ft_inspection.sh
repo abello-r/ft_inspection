@@ -5,6 +5,7 @@ GREEN=`tput setaf 2`
 CYAN=`tput setaf 6`
 BLUE=`tput setaf 4`
 RESET=`tput sgr0`
+WHITE=`tput setaf 7`
 
 # Init
 sh srcs/.prompt.sh
@@ -30,22 +31,22 @@ if [ -f srcs/.env ]
 		ruby srcs/menu.rb
 	else
 		# Ad
-		echo "\nIf you don't have your keys yet, you can get them at ${CYAN}https://profile.intra.42.fr/oauth/applications${RESET}\n"
+		echo "\n${WHITE}If you don't have your keys yet, you can get them at ${CYAN}https://profile.intra.42.fr/oauth/applications${RESET}\n"
 		
 		# Fill UID camp
-		echo "${BLUE}Enter your UID key ...${RESET}"
+		echo "${WHITE}# ${BLUE}Enter your UID key ...${WHITE}"
 		read FILL_UID
-		echo "${CYAN}Received [${FILL_UID}] [OK]${RESET}"
+		echo "${CYAN}Received [${FILL_UID}] [OK]${WHITE}"
 		sleep 2s
 
 		# Fill SECRET camp
-		echo "${BLUE}Now enter your SECRET key ... ${RESET}"
+		echo "${WHITE}# ${BLUE}Now enter your SECRET key ... ${WHITE}"
 		read FILL_SECRET
-		echo "${CYAN}Received [${FILL_SECRET}] [OK] ${RESET}"
+		echo "${CYAN}Received [${FILL_SECRET}] [OK] ${WHITE}"
 		sleep 2s
 
 		# Create .env file
-		echo "${CYAN}Your configuration is being created ...${RESET}"
+		echo "${WHITE}# ${CYAN}Your configuration is being created ...${RESET}"
 		echo 'UID='$FILL_UID > srcs/.env
 		echo 'SECRET='$FILL_SECRET >> srcs/.env
 		echo 'URL=https://api.intra.42.fr/oauth/token' >> srcs/.env

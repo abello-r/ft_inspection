@@ -5,19 +5,19 @@ def ft_menu
 	opt_usr = 0;
 
 	# Menu Options
-	print "{1}--| ".blue; puts ""
-	print "{2}--| ".blue; puts ""
-	print "{3}--| ".blue; puts ""
-	print "{4}--| ".blue; puts ""
-	print "{5}--| ".blue; puts ""
-	print "{6}--| ".blue; puts ""
-	print "{7}--| ".blue; puts "See status token"
-	print "{8}--| ".blue; puts "Edit API token"
-	print "{0}--| ".blue; puts "Update"
-	print "{99}-| ".blue; print "Exit\n\n"
+	print "{1}--| ".cyan; puts ""
+	print "{2}--| ".cyan; puts ""
+	print "{3}--| ".cyan; puts ""
+	print "{4}--| ".cyan; puts ""
+	print "{5}--| ".cyan; puts ""
+	print "{6}--| ".cyan; puts ""
+	print "{7}--| ".cyan; puts "See status token"
+	print "{8}--| ".cyan; puts "Edit API token"
+	print "{0}--| ".cyan; puts "Update"
+	print "{99}-| ".cyan; print "Exit\n\n"
 	
 	# Command Line
-	print "ft_inspection~# ".blue
+	print "ft_inspection~# ".cyan
 	opt_usr = STDIN.gets.chomp
 
 	if opt_usr == ""
