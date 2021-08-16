@@ -13,7 +13,7 @@ def ft_menu
 	print "{6}--| ".blue; puts ""
 	print "{7}--| ".blue; puts "See status token"
 	print "{8}--| ".blue; puts "Edit API token"
-	print "{0}--| ".blue; puts "Install & Update"
+	print "{0}--| ".blue; puts "Update"
 	print "{99}-| ".blue; print "Exit\n\n"
 	
 	# Command Line
@@ -39,8 +39,8 @@ def ft_menu
 	else
 		print "\nCommand not found\n\n"
 		sleep 0.5
-		system("sh ft_inspection.sh")
 		system("clear")
+		system("sh srcs/.prompt.sh")
 		ft_menu()
 	end
 
